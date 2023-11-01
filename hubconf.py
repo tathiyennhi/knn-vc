@@ -37,9 +37,9 @@ def hifigan_wavlm(pretrained=True, progress=True, prematched=True, device='cuda'
     
     if pretrained:
         if prematched:
-            url = "https://github.com/bshall/knn-vc/releases/download/v0.1/prematch_g_02500000.pt"
+            url = "https://github.com/tathiyennhi/knn-vc/releases/download/v0.1/prematch_g_02500000.pt"
         else:
-            url = "https://github.com/bshall/knn-vc/releases/download/v0.1/g_02500000.pt"
+            url = "https://github.com/tathiyennhi/knn-vc/releases/download/v0.1/g_02500000.pt"
         state_dict_g = torch.hub.load_state_dict_from_url(
             url,
             map_location=device,
@@ -59,7 +59,7 @@ def wavlm_large(pretrained=True, progress=True, device='cuda') -> WavLM:
             logging.warning(f"Overriding device {device} to cpu since no GPU is available.")
             device = 'cpu'
     checkpoint = torch.hub.load_state_dict_from_url(
-        "https://github.com/bshall/knn-vc/releases/download/v0.1/WavLM-Large.pt", 
+        "https://github.com/tathiyennhi/knn-vc/releases/download/v0.1/WavLM-Large.pt", 
         map_location=device, 
         progress=progress
     )
