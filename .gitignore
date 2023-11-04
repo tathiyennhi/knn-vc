@@ -136,6 +136,6 @@ dmypy.json
 
 # Remove
 traindata/
-LJSpeech-1.1/wavs
+LJSpeech-1.1
 LJSpeech-1.2/wavs
 models/
